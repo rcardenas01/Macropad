@@ -7,12 +7,20 @@
 class Macro
 {
 private:
+  String name;
+  
+public:
+  Macro();
+
   struct KeyCombo
   {
     char press;
     String message;
   };
-public:
+
+  void add(KeyCombo);
+  void execute();
+  void clear_
 };
 
 #endif //MACRO_H
