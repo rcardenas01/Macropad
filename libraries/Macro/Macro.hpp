@@ -3,24 +3,24 @@
 
 #include <Ardruino.h>
 #include <String.h>
+#include <Keyboard.h>
 
 class Macro
 {
 private:
-  String name;
-  
-public:
-  Macro();
-
+  arduino::String name;
   struct KeyCombo
   {
     char press;
-    String message;
+    arduino::String message;
   };
+  
+public:
+  Macro(arduino::String);
 
-  void add(KeyCombo);
+  void add(char, arduino::String);
   void execute();
-  void clear_
+  void clear_macro();
 };
 
 #endif //MACRO_H
